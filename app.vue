@@ -10,7 +10,7 @@ import { useAuth } from './stores/auth';
 
   const authStore = useAuth();
 
-  const { user, token ,isLoggedIn } = authStore;
+  const { getUser, getToken } = authStore;
 
   
   

@@ -7,7 +7,14 @@ export const useAuth = defineStore(
                 isLoggedIn: false,
             }
         },
-
+        getters: {
+            getUser() {
+                return this.user;
+            },
+            getToken() {
+                return this.token;
+            }
+        },
         actions: {
             async login(body) { // asuming that body contains email and password 
                 const response = await backend.post("/login", body); // backend is an axios instance and should return a user object with a token
